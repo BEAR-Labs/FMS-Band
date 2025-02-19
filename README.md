@@ -39,7 +39,6 @@ The FMG band’s core components include FSR400 sensors integrated into a voltag
 
 
 
- _Further Instuctions to be Added..._ 
 
 
 
