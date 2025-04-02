@@ -5,7 +5,7 @@
 
 
 ## Introduction
-Hand gesture recognition is a vital component in the development of technologies such as prosthetics, exoskeletons, and virtual reality systems, offering intuitive and user-friendly control interfaces. However, the high cost and dependency on expensive software of commercially available solutions create barriers to their accessibility, particularly for research and clinical cases. The design focuses on fitment for consistent sensor contact, accessibility through affordable components and open-source tools, and modularity for customization and integration with various systems.This manual aims to guide the process of constructing a low-cost, open-source Force Myography (FMG) device.  
+Hand gesture recognition is a vital component in the development of technologies such as prosthetics, exoskeletons, and virtual reality systems, offering intuitive and user-friendly control interfaces. However, the high cost and dependency on expensive software of commercially available solutions create barriers to their accessibility, particularly for research and clinical cases. The armband design focuses on fitment for consistent sensor contact, accessibility through affordable components and open-source tools, and modularity for customization and integration with various systems. This manual aims to guide the process of constructing a low-cost, open-source Force Myography (FMG) device.  
 
 
 ### FMG
@@ -22,7 +22,7 @@ This design uses FMG technology to detect radial muscle forces on the forearm, c
 | PCB Protoboard (×20) | 1 | $9.99 | $9.99  |
 | ABS Resin | 1 | $44.09 | $44.09  |
 | Copper Tape | 1 | $6.88 | $6.88  |
-| PDNS Domes (x100) | 1 | $7.99 | $7.99  |
+| PDMS Domes (x100) | 1 | $7.99 | $7.99  |
 | 7.5 kOhm Resistors (x100) | 1 | $5.49 | $5.49  |
 | Wiring Sheath | 1 | $7.63 | $7.63  |
 | Hot Glue Sticks (x10) | 1 | $2.92 | $2.92 |
@@ -40,11 +40,33 @@ The FMG band’s core components include FSR400 sensors integrated into a voltag
 
 > PDMS Dome, FSR400, and Sensor Cradle construction
 
+### Cradle construction
+
+1. Print eight cradles using the Real_Holder_V9.stl provided.  
+   > *Image to be added*
+
+2. Place an FSR400 pressure sensor into each cradle and apply liquid adhesive to secure the sensor in position.  
+   > *Image to be added*
+
+3. Carefully fit an adhesive PDMS dome to the sensing surface of each FSR, ensuring full coverage over the active sensing region to evenly distribute forces.  
+   > *Image to be added*
+
+4. Bend the FSR solder tabs at a 90° angle so they lay flat on the cradle.  
+   > *Image to be added*
+
+5. Solder input and output wires to the copper tape, and reinforce the connections with a thin layer of hot glue to prevent stress from wire tension.  
+   > *Image to be added*
+
+6. Mount the sensor units onto a Velcro base band for easy adjustment and modularity.  
+   > *Image to be added*
+
+7. Connect a 9-wire bus cable with a DuPont connector to the Velcro band and tether the device to any data acquisition system.  
+   > *Image to be added*
 
 
 
 ## Circuit Design - Voltage Divider (VD)
-Each FSR400 sensor is placed externally on a separate device (the velcro armband) and connected to the circuit board through dedicated pin headers. One pin of the FSR is connected to an external +5V source, while the other pins are connected to a junction on the circuit board. In this junction one end is linked to the 7.5 kΩ resistor and another to the Sig0. The end of the resistor not connected to the pin junction is connected to ground. The output signal (Sig0) is measured at the junction between the FSR and resistor and is sent to an external microcontroller through another set of dedicated pins. This setup allows for modularity and easy sensor replacement while still providing an analog voltage output that varies based on applied force.
+Each FSR400 sensor is placed externally on a separate device (the velcro armband) and connected to the circuit board through dedicated pin headers. One pin of the FSR is connected to an external +5V source, while the other pins are connected to a junction on the circuit board. In this junction one end is linked to the 7.5 kΩ resistor and another to the Sig0. The end of the resistor not connected to the pin junction is connected to the GND. The output signal (Sig0) is measured at the junction between the FSR and resistor and is sent to an external microcontroller through another set of dedicated pins. This setup allows for modularity and easy sensor replacement while still providing an analog voltage output that varies based on applied force.
 
 
 
@@ -55,34 +77,22 @@ Each FSR400 sensor is placed externally on a separate device (the velcro armband
 
 
 ### Assembling the VD Circuit
-Solder pins for the output voltage node (Sig0), FSR400, and Source connection to the protoboard
-> image of the pins 
 
+1. Solder pin headers for Sig0, FSR400, and Source onto the protoboard.  
+   > *Image to be added*
 
-Solder all 7.5 kΩ resistors with enough room between it and the pins to create a junction
+2. Solder all 7.5 kΩ resistors to the protoboard, leaving space between the resistors and the pin headers.  
+   > *Image to be added*
 
+3. Connect one end of each 7.5 kΩ resistor together to form a junction, then solder that junction to GND.  
+   > *Image to be added*
 
-> Image to be added
+4. Connect one pin of the FSR400 header to +5V and one pin of the Sig0 header to GND.  
+   > *Image to be added*
 
+5. Create a junction between the FSR400 pin header, the Sig0 pin header, and the free end of a 7.5 kΩ resistor, then solder a wire from the Sig0 header to the FSR400 header via the resistor.  
+   > *Image to be added*
 
-Create a junction that connects one end of all the resistors and bring that connection to ground
-
-
-> Image to be added
-
-
-Use one pin from Sig0 and connect to ground 
-Use one pin from FSR400 and connect to +5v
-
-
-> Image to be added
-
-
-Create a junction between the FSR400 pin header, Sig0 pin header, and the 7.5k resistor
-Solder a wire from Sig0 pin header and the resistor that connect to the FSR400 pin header 
-
-
-> Image to be added
 
 
 
