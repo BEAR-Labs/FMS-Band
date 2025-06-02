@@ -86,16 +86,22 @@ Each FSR400 sensor is placed externally on the Velcro armband and connected to t
  <img width="600" alt="Screenshot 2025-02-19 at 13 11 41" src="https://github.com/user-attachments/assets/bcb9cf2e-1cca-423b-a06e-2f4178982906"/>
 
 
-
-
 4. Create a junction between the FSR400 pin header, the Sig0 pin header, and the free end of a 7.5 kΩ resistor. One end of the wire should be in the junction while the other end should connect to the Sig0 pin header.
 
- <img width="300" alt="Screenshot 2025-02-19 at 13 11 41" src="https://github.com/user-attachments/assets/c582ac21-7143-4f64-912d-94c2ea2688de"/>
+ <img width="280" alt="Screenshot 2025-02-19 at 13 11 41" src="https://github.com/user-attachments/assets/c582ac21-7143-4f64-912d-94c2ea2688de"/>
  <img width="500" alt="Screenshot 2025-02-19 at 13 11 41" src="https://github.com/user-attachments/assets/1709cc80-8568-45e6-9574-1f5faa0d99fa"/>
 
  
-5. Connect one pin of the FSR400 header to +5V and one pin of the Sig0 header to GND.  
-   > *Image to be added*
+5. Connect one pin of the FSR400 header to +5V and one pin of the Sig0 header to GND.
+
+<img width="250" alt="Screenshot 2025-02-19 at 13 11 41" src="https://github.com/user-attachments/assets/ec814713-f55e-447f-a73b-cc44895e4161"/>
+<img width="500" alt="Screenshot 2025-02-19 at 13 11 41" src="https://github.com/user-attachments/assets/4cc24b34-5e57-4762-aa9a-b56268209900"/>
+
+6. Complete!
+   
+<img width="250" alt="Screenshot 2025-02-19 at 13 11 41" src="https://github.com/user-attachments/assets/ec814713-f55e-447f-a73b-cc44895e4161"/>
+
+
 
 
 
